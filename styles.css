@@ -35,7 +35,7 @@ body {
 
 .product-card-image {
   flex: 0 0 50%;
-  background-image: url("../images/image-product-desktop.jpg");
+  background-image: url("./images/image-product-desktop.jpg");
   background-size: cover;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -136,7 +136,7 @@ body {
     border-top-right-radius: 12px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    background-image: url("../images/image-product-mobile.jpg");
+    background-image: url("./images/image-product-mobile.jpg");
     background-size: cover;
   }
 
