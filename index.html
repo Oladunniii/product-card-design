@@ -15,21 +15,23 @@
     <title>Frontend Mentor | Product preview card component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <!-- <style>
+    <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style> -->
+  </style>
 
     <link rel="stylesheet" href="/styles.css" />
+    <!-- <link rel="stylesheet" href="/new-styles.css"> -->
   </head>
   <body>
     <main class="product-card">
       <div class="product-card-image">
-        <img src="/images/image-product-desktop.jpg" alt="product-image" />
+        <!-- <img src="/images/image-product-desktop.jpg" alt="product-image" /> -->
       </div>
       <div class="product-card-details">
         <h3 class="product-category">Perfume</h3>
-        <h1 class="product-title">Gabrielle <br>Essence Eau <br>De Parfum</h1>
+        <h1 class="product-title-desktop">Gabrielle <br>Essence Eau <br>De Parfum</h1>
+        <h1 class="product-title-mobile">Gabrielle Essence <br>Eau De Parfum</h1>
         <p class="product-description">
           A floral, solar and voluptuous interpretation composed by Olivier
           Polge, Perfumer-Creator for the House of CHANEL.
@@ -38,7 +40,10 @@
           <span class="main-price">$149.99</span>
           <span class="old-price">$169.99</span>
         </h2>
-        <button>
+        <button class="add-to-cart-btn">
+          <span>
+            <img src="/images/icon-cart.svg" alt="cart-icon">
+          </span>
           <span>Add to Cart</span>
         </button>
       </div>

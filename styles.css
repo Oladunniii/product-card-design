@@ -1,65 +1,161 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  h1,h2,h3,p{
-      padding: 0;
-      margin: 0;
-  }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
-  body {
-    background-color: hsl(30, 38%, 92%);
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  .product-card{
-    display: flex;
-    width: 60%;
-    /* height: 40vh; */
+h1,
+h2,
+h3,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+.product-card {
+  display: flex;
+  width: 50%;
+  height: 70vh;
+  margin: 5% auto;
+  border-radius: 20px;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.product-card-image {
+  flex: 0 0 50%;
+  background-image: url("../images/image-product-desktop.jpg");
+  background-size: cover;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-position: center;
+}
+
+.product-card-details {
+  flex: 0 0 50%;
+  padding: 3rem 3.5rem 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-category {
+  color: hsl(228, 12%, 48%);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.product-title-desktop {
+  font-size: 2rem;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  color: hsl(212, 21%, 14%);
+  line-height: 0.95;
+}
+
+.product-title-mobile {
+  display: none;
+}
+
+.product-description {
+  color: hsl(228, 12%, 48%);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.product-price {
+  display: inline-flex;
+  align-items: center;
+  /* padding-right: 1.2rem; */
+  /* justify-content: space-between; */
+  gap: 1.5rem;
+}
+
+.main-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+  font-family: 'Fraunces', serif;
+}
+
+.old-price {
+  text-decoration: line-through;
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
+  font-size: 0.95rem;
+}
+
+.add-to-cart-btn {
+  margin-top: 0.75rem;
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  padding: 1rem;
+  border-radius: 10px;
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+  background-color: hsl(158, 36%, 27%);
+}
+
+/* MEDIA QUERIES FOR MOBILE SCREEN */
+@media screen and (max-width: 768px) {
+  .product-card {
+    width: 95%;
+    height: 80vh;
     margin: 5% auto;
-    /* gap: 3rem; */
-    border-radius: 20px;
-    background-color: hsl(0, 0%, 100%);
+    flex-direction: column;
+    border-radius: 12px;
   }
 
-  .product-card-image{
-    flex: 1;
-
-  }
-  .product-card-image img{
-    /* border-top-left-radius: 20px; */
-    height: auto;
-    width: 350px;
-    
+  .product-card-details {
+    justify-content: center;
+    gap: 1rem;
   }
 
-  .product-card-details{
-    flex: 1;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-
-    .product-category{
-color: hsl(228, 12%, 48%);
-text-transform: uppercase;
-font-weight: 300;
-    }
-
-    .product-title{
-font-size: 2rem;
-font-family: "Fraunces", serif;
-font-weight: 700;
-color: hsl(212, 21%, 14%);
-    }
-    
+  .product-card-image {
+    flex: 0 0 45%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-image: url("../images/image-product-mobile.jpg");
+    background-size: cover;
   }
 
-  
+  .product-title-desktop {
+    display: none;
+    /* font-size: 2rem; */
+  }
+
+  .product-title-mobile {
+    display: block;
+    font-size: 2rem;
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    color: hsl(212, 21%, 14%);
+    line-height: 1.2;
+  }
+
+  .product-card-details {
+    flex: 0 0 55%;
+    padding: 1.5rem 2rem;
+  }
+}
